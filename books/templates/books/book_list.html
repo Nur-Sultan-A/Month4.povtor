@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Книги</title>
+</head>
+<body>
+    <h1>Список книг</h1>
+
+    {% for book in books %}
+        <p>
+            <a href="{{ book.id }}/">{{ book.title }} — {{ book.author }}</a>
+        </p>
+    {% empty %}
+        <p>Книг нет</p>
+    {% endfor %}
+</body>
+</html>
